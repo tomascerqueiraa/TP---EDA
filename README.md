@@ -11,7 +11,6 @@ Laboratórios de Informática
 
 
 ## organização
-[doxdoc/](./doxdoc/)  documentação com o relatórioi gerado pela ferramenta Doxygen
 [doc/](./doc/)  documentação com o relatório
 
 ## Gerar documentação do codigo (Doxygen)
