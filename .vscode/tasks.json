@@ -1,0 +1,25 @@
+{
+"version": "2.0.0",
+"tasks": [
+    {
+    "label": "build",
+    "type": "shell",
+    "command": "gcc",
+    "args": [
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "main.c",
+        "antenas.c",
+        "-o",
+        "antenas.exe"
+    ],
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    },
+    "problemMatcher": [],
+    "detail": "Compilação do projeto EDA"
+    }
+]
+}

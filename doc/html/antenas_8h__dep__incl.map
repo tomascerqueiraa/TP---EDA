@@ -1,0 +1,12 @@
+<map id="antenas/antenas.h" name="antenas/antenas.h">
+<area shape="rect" id="Node000001" title="Definição da estrutura de dados para as antenas." alt="" coords="163,5,306,31"/>
+<area shape="rect" id="Node000002" href="$antenas_8c.html" title="Impleementação das funções de manipulação da lista ligada de antenas." alt="" coords="5,79,147,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,39,103,81,101,76,196,34"/>
+<area shape="rect" id="Node000003" href="$efeitos_8h.html" title="Declarações e definições relacionadas aos efeitos nefastos causados por antenas." alt="" coords="171,79,299,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,44,237,79,232,79,232,44"/>
+<area shape="rect" id="Node000005" href="$main_8c.html" title="Programa principal para testar a implementação da lista ligada de antenas." alt="" coords="303,152,369,177"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="269,36,292,54,313,77,330,117,337,151,332,153,325,118,308,80,289,58,266,40"/>
+<area shape="rect" id="Node000004" href="$efeitos_8c.html" title="Implementação das funções para calcular e gerenciar os efeitos nefastos causados por antenas." alt="" coords="151,152,278,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="230,118,220,153,215,151,225,117"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="264,110,321,150,318,154,261,114"/>
+</map>

@@ -1,0 +1,172 @@
+\doxysection{efeitos/efeitos.c File Reference}
+\hypertarget{efeitos_8c}{}\label{efeitos_8c}\index{efeitos/efeitos.c@{efeitos/efeitos.c}}
+
+
+Implementação das funções para calcular e gerenciar os efeitos nefastos causados por antenas.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}efeitos.\+h"{}}\newline
+Include dependency graph for efeitos.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{efeitos_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{efeitos_8c_a27b4819f455cc449445ed3d57098a290}{calcular\+Efeito}} (\mbox{\hyperlink{structAntena}{Antena}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{structAntena}{Antena}} \texorpdfstring{$\ast$}{*}b, int \texorpdfstring{$\ast$}{*}x\+Res, int \texorpdfstring{$\ast$}{*}y\+Res)
+\begin{DoxyCompactList}\small\item\em Verifica se duas antenas estão alinhadas e se uma está ao dobro da distância da outra. Se sim, calcula a localização com efeito nefasto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{efeitos_8c_aa8164e4ddd64f9b3c52129b96067fa39}{efeito\+Existe}} (\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*}lista, int x, int y)
+\begin{DoxyCompactList}\small\item\em Verifica se um efeito com coordenadas específicas já existe na lista de efeitos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{efeitos_8c_a1665d27bf935547315df135074cab383}{adicionar\+Efeito}} (\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}lista, int x, int y)
+\begin{DoxyCompactList}\small\item\em Adiciona um novo efeito à lista de efeitos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{efeitos_8c_a5988703ee17fb7bec5779c4748b7719d}{deduzir\+Efeitos\+Nefastos}} (\mbox{\hyperlink{structAntena}{Antena}} \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Gera uma lista de localizações com efeito nefasto a partir das antenas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{efeitos_8c_a8e156197f2bfb3bc88242aee9b682bec}{listar\+Efeitos}} (\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Exibe todos os efeitos nefastos encontrados na consola. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{efeitos_8c_ac195028d29590055a07a716f126947ac}{limpar\+Efeitos}} (\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Liberta a memória associada à lista de efeitos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções para calcular e gerenciar os efeitos nefastos causados por antenas. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{efeitos_8c_a1665d27bf935547315df135074cab383}\label{efeitos_8c_a1665d27bf935547315df135074cab383} 
+\index{efeitos.c@{efeitos.c}!adicionarEfeito@{adicionarEfeito}}
+\index{adicionarEfeito@{adicionarEfeito}!efeitos.c@{efeitos.c}}
+\doxysubsubsection{\texorpdfstring{adicionarEfeito()}{adicionarEfeito()}}
+{\footnotesize\ttfamily void adicionar\+Efeito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{lista,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Adiciona um novo efeito à lista de efeitos. 
+
+Esta função adiciona um novo efeito com as coordenadas fornecidas à lista ligada de efeitos nefastos. Antes de adicionar, a função verifica se o efeito já existe na lista para evitar duplicação de efeitos. A inserção do novo efeito é feita no início da lista.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de efeitos. \\
+\hline
+{\em x} & Coordenada X do novo efeito. \\
+\hline
+{\em y} & Coordenada Y do novo efeito. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{efeitos_8c_a27b4819f455cc449445ed3d57098a290}\label{efeitos_8c_a27b4819f455cc449445ed3d57098a290} 
+\index{efeitos.c@{efeitos.c}!calcularEfeito@{calcularEfeito}}
+\index{calcularEfeito@{calcularEfeito}!efeitos.c@{efeitos.c}}
+\doxysubsubsection{\texorpdfstring{calcularEfeito()}{calcularEfeito()}}
+{\footnotesize\ttfamily int calcular\+Efeito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAntena}{Antena}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{\mbox{\hyperlink{structAntena}{Antena}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int \texorpdfstring{$\ast$}{*}}]{x\+Res,  }\item[{int \texorpdfstring{$\ast$}{*}}]{y\+Res }\end{DoxyParamCaption})}
+
+
+
+Verifica se duas antenas estão alinhadas e se uma está ao dobro da distância da outra. Se sim, calcula a localização com efeito nefasto. 
+
+Esta função determina se duas antenas da mesma frequência estão alinhadas e se a distância entre elas é tal que o ponto médio entre elas resulta em um efeito nefasto. O ponto de efeito nefasto é calculado como o ponto médio entre as antenas quando elas estão alinhadas (horizontal, vertical ou diagonal).
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Ponteiro para a primeira antena. \\
+\hline
+{\em b} & Ponteiro para a segunda antena. \\
+\hline
+{\em x\+Res} & Ponteiro para a coordenada X do efeito nefasto calculado. \\
+\hline
+{\em y\+Res} & Ponteiro para a coordenada Y do efeito nefasto calculado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se houver efeito nefasto entre as antenas, 0 caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{efeitos_8c_a5988703ee17fb7bec5779c4748b7719d}\label{efeitos_8c_a5988703ee17fb7bec5779c4748b7719d} 
+\index{efeitos.c@{efeitos.c}!deduzirEfeitosNefastos@{deduzirEfeitosNefastos}}
+\index{deduzirEfeitosNefastos@{deduzirEfeitosNefastos}!efeitos.c@{efeitos.c}}
+\doxysubsubsection{\texorpdfstring{deduzirEfeitosNefastos()}{deduzirEfeitosNefastos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*} deduzir\+Efeitos\+Nefastos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAntena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista }\end{DoxyParamCaption})}
+
+
+
+Gera uma lista de localizações com efeito nefasto a partir das antenas. 
+
+Deduz os efeitos nefastos com base nas posições das antenas.
+
+Esta função percorre a lista de antenas e verifica todos os pares de antenas para calcular os efeitos nefastos entre elas. Para cada par de antenas, se as condições forem atendidas (mesma frequência e distância adequada), um novo efeito é gerado e adicionado à lista de efeitos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de antenas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a lista de efeitos nefastos gerados. 
+\end{DoxyReturn}
+\Hypertarget{efeitos_8c_aa8164e4ddd64f9b3c52129b96067fa39}\label{efeitos_8c_aa8164e4ddd64f9b3c52129b96067fa39} 
+\index{efeitos.c@{efeitos.c}!efeitoExiste@{efeitoExiste}}
+\index{efeitoExiste@{efeitoExiste}!efeitos.c@{efeitos.c}}
+\doxysubsubsection{\texorpdfstring{efeitoExiste()}{efeitoExiste()}}
+{\footnotesize\ttfamily int efeito\+Existe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*}}]{lista,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Verifica se um efeito com coordenadas específicas já existe na lista de efeitos. 
+
+Esta função percorre a lista de efeitos nefastos e verifica se já existe um efeito com as coordenadas fornecidas (x, y). Se o efeito já existir, a função retorna 1, caso contrário, retorna 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de efeitos. \\
+\hline
+{\em x} & Coordenada X do efeito a ser verificado. \\
+\hline
+{\em y} & Coordenada Y do efeito a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se o efeito já existir na lista, 0 caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{efeitos_8c_ac195028d29590055a07a716f126947ac}\label{efeitos_8c_ac195028d29590055a07a716f126947ac} 
+\index{efeitos.c@{efeitos.c}!limparEfeitos@{limparEfeitos}}
+\index{limparEfeitos@{limparEfeitos}!efeitos.c@{efeitos.c}}
+\doxysubsubsection{\texorpdfstring{limparEfeitos()}{limparEfeitos()}}
+{\footnotesize\ttfamily void limpar\+Efeitos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*}}]{lista }\end{DoxyParamCaption})}
+
+
+
+Liberta a memória associada à lista de efeitos. 
+
+Liberta a memória associada à lista de efeitos nefastos.
+
+Esta função percorre a lista de efeitos e liberta a memória alocada para cada nó da lista. Ao fim, a memória de toda a lista de efeitos é limpa.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de efeitos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{efeitos_8c_a8e156197f2bfb3bc88242aee9b682bec}\label{efeitos_8c_a8e156197f2bfb3bc88242aee9b682bec} 
+\index{efeitos.c@{efeitos.c}!listarEfeitos@{listarEfeitos}}
+\index{listarEfeitos@{listarEfeitos}!efeitos.c@{efeitos.c}}
+\doxysubsubsection{\texorpdfstring{listarEfeitos()}{listarEfeitos()}}
+{\footnotesize\ttfamily void listar\+Efeitos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeito}{Efeito}} \texorpdfstring{$\ast$}{*}}]{lista }\end{DoxyParamCaption})}
+
+
+
+Exibe todos os efeitos nefastos encontrados na consola. 
+
+Lista todos os efeitos nefastos na consola.
+
+Esta função imprime na consola todos os efeitos nefastos encontrados na lista. A exibição é feita de forma tabular, mostrando as coordenadas de cada efeito.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de efeitos. \\
+\hline
+\end{DoxyParams}
