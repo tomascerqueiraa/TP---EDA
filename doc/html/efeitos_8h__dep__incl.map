@@ -1,7 +1,0 @@
-<map id="efeitos/efeitos.h" name="efeitos/efeitos.h">
-<area shape="rect" id="Node000001" title="Declarações e definições relacionadas aos efeitos nefastos causados por antenas." alt="" coords="65,5,193,31"/>
-<area shape="rect" id="Node000002" href="$efeitos_8c.html" title="Implementação das funções para calcular e gerenciar os efeitos nefastos causados por antenas." alt="" coords="5,79,132,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,43,80,80,76,77,108,40"/>
-<area shape="rect" id="Node000003" href="$main_8c.html" title="Programa principal para testar a implementação da lista ligada de antenas." alt="" coords="157,79,223,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,40,182,77,178,80,146,43"/>
-</map>

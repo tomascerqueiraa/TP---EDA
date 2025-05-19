@@ -1,9 +1,0 @@
-<map id="efeitos/efeitos.h" name="efeitos/efeitos.h">
-<area shape="rect" id="Node000001" title="Declarações e definições relacionadas aos efeitos nefastos causados por antenas." alt="" coords="21,5,149,31"/>
-<area shape="rect" id="Node000002" href="$antenas_8h.html" title="Definição da estrutura de dados para as antenas." alt="" coords="8,79,163,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,31,88,65,83,65,83,31"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,72,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,106,56,142,52,139,75,103"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="97,152,167,177"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="95,103,119,139,115,142,91,106"/>
-</map>
